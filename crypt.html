@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSA Programme</title>
+<link rel="stylesheet" href="css/styles.css">
+<script defer src="scripts/script.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif;}
+body{background:#f3f4f6;min-height:100vh;display:flex;flex-direction:column;}
+header{background:#6B5B95;padding:20px;color:white;text-align:center;}
+header h1{font-size:1.8rem;}
+.container{width:90%;max-width:700px;margin:20px auto;}
+h2{text-align:center;color:#333;margin-bottom:15px;}
+.rsa-box{border:1px solid #d1d5db;border-radius:10px;padding:15px;background:#fff;margin-bottom:15px;}
+summary{font-weight:bold;cursor:pointer;color:#6B5B95;font-size:1.1rem;}
+summary::marker{color:#F67280;}
+textarea{width:100%;padding:10px;margin-top:10px;font-family:monospace;}
+button{margin-top:10px;background:#6B5B95;color:white;padding:8px 15px;border:none;border-radius:6px;cursor:pointer;}
+button:hover{background:#F67280;}
+#result{width:100%;min-height:100px;padding:10px;margin-top:10px;border-radius:8px;border:1px solid #94a3b8;font-family:monospace;background:#f7f7f7;resize:vertical;}
+fieldset{margin-top:10px;padding:10px;}
+legend{font-weight:bold;}
+input[type=number]{width:30%;padding:5px;margin-right:5px;}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>RSA-Cryptographie</h1>
+        <nav>
+            <ul class="nav-center">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="crypt.html">RSA-programme</a></li>
+                <li><a href="stats.html" target="_blank">Statistiques</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container" >
+<h2 class="rsa-box" open>Centre de Cryptographie (RSA)</h2>
+
+<!-- Type d'entrée -->
+<div class="rsa-box">
+    <h3>🛠 Opérations disponibles</h3>
+    <fieldset class="rsa-box" open>
+        <legend style="font-size: 12px;">Type d'entrée</legend>
+        <label><input type="radio" name="inputType" value="text" checked> Texte à saisir</label>
+        <label><input type="radio" name="inputType" value="file"> Fichier</label>
+    </fieldset>
+
+
+<!-- Chiffrement -->
+<details class="rsa-box" open>
+    <summary>🔐 Chiffrement RSA</summary>
+    <!-- Zone d'entrée dynamique -->
+    <div id="inputZone">
+        <textarea id="plainText" rows="3" placeholder="Texte clair à chiffrer..."></textarea>
+    </div>
+    <fieldset>
+        <legend>Clés RSA</legend>
+        <input type="number" id="p" placeholder="p">
+        <input type="number" id="q" placeholder="q">
+        <input type="number" id="e" placeholder="e">
+    </fieldset>
+     <a href="#result"><button onclick="encryptRSA()">Chiffrer</button></a>
+</details>
+
+<!-- Déchiffrement -->
+<details class="rsa-box">
+    <summary>🔓 Déchiffrement RSA</summary>
+    <!-- Zone d'entrée dynamique -->
+    <div id="decryptInputZone">
+        <textarea id="plainText" rows="3" placeholder="Texte clair à chiffrer..."></textarea>
+    </div>
+
+    <fieldset>
+        <legend>Clés RSA</legend>
+        <input type="number" id="dp" placeholder="p">
+        <input type="number" id="dq" placeholder="q">
+        <input type="number" id="de" placeholder="e">
+    </fieldset>
+     <a href="#result"><button onclick="decryptRSA()">Déchiffrer</button></a>
+</details>
+
+<!-- Cassage -->
+<details class="rsa-box">
+    <summary>💥 Cassage RSA</summary>
+    <textarea id="cipherCrack" rows="3" placeholder="Texte chiffré à casser..."></textarea>
+    <a href="#result"><button onclick="crackRSA()">Casser RSA</button></a>
+</details>
+
+<!-- Résultat -->
+<!-- Résultat -->
+<div class="rsa-box" open>
+    <h3>Résultat</h3>
+
+    <!-- Résultat texte -->
+    <textarea id="result" readonly placeholder="Le résultat apparaîtra ici..."></textarea>
+
+    <!-- Résultat fichier -->
+    <div id="fileResult" style="display:none; margin-top:10px;">
+        <p id="fileName" style="margin-bottom:8px;font-weight:bold;"></p>
+        <button onclick="downloadResult()"> Télécharger le fichier</button>
+    </div>
+</div>
+
+</div>
+</div>
+<footer>
+        <div class="container" >
+            <p><a href="about.html">À propos</a></p>
+            <p>&copy; 2025 — EST-D | Filière GRS | Tous les droits sont reserves</p>
+            
+        </div>
+    </footer>
+</body>
+</html>

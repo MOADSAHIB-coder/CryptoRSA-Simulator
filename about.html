@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - EST</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Styles supplémentaires pour About.html */
+        .hero-about {
+            background-image: url('imgs/est-campus.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .hero-about::before {
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.5);
+            border-radius: 12px;
+        }
+        .hero-about h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5rem;
+        }
+        .section-content {
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .rsa-code {
+            background: #f7f9fc;
+            padding: 15px;
+            border-left: 5px solid #1e3a8a;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        .team {
+            flex-wrap: wrap;
+        }
+        .member {
+            width: 220px;
+        }
+        /* Style général pour les détails */
+        details {
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 3px solid #e678fc; /* accent visuel */
+            background-color: #f9f9f9;
+        }
+
+        /* Style pour le summary */
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #a41dbe;       /* couleur noire */
+            font-size: 16px;
+            outline: none;     /* retire le contour par défaut */
+        }
+
+        /* Optionnel : style au hover */
+        details summary:hover {
+            color: #6e076e;       /* légèrement différent au survol */
+        }
+
+        /* Contenu à l'intérieur de details */
+        details div.rsa-code {
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #eaeaea;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container" class="fade-in">
+            <h1>RSA-Cryptographie</h1>
+
+            <nav>
+                <ul class="nav-center">
+                    <li><a href="index.html" >Accueil</a></li>
+                    <li><a href="crypt.html" >RSA-programme</a></li>
+                    <li><a href="stats.html" target="_blank">Statistiques</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-about">
+        <h1>À propos de notre École et Projet</h1>
+    </div>
+
+    <div class="container fade-in">
+
+        <!-- Description de l'école -->
+        <section>
+            <h2>École Supérieure de Technologie Dakhla</h2>
+            <div class="section-content">
+                <p>L'École Supérieure de Technologie de Dakhla (EST Dakhla) est un établissement public d'enseignement supérieur technologique et professionnel situé à Dakhla. Elle a pour mission principale de former des étudiants hautement qualifiés dans les domaines du numérique, de l'ingénierie et des technologies de l'information, en intégrant à la fois l'enseignement théorique et la pratique professionnelle. L’école met un accent particulier sur le développement des compétences pratiques afin de répondre aux besoins du marché du travail et des entreprises locales et nationales.</p>
+                <p><strong>Directeur :</strong> <em>M. Zohir</em>, un expert reconnu dans le domaine de la gestion des établissements universitaires et des technologies de l’information, qui supervise le développement académique et stratégique de l’institution. Sous sa direction, l’école vise à renforcer la qualité de l’enseignement et à encourager la recherche appliquée et l’innovation technologique.</p>
+
+            </div>
+        </section>
+
+        <!-- Description de la filière -->
+        <section>
+            <h2>Filière : Gestion des Réseaux et Sécurité Informatique (GRS)</h2>
+            <div class="section-content">
+                <p>La filière GRS de l'École Supérieure de Technologie de Dakhla forme des étudiants aux métiers liés aux réseaux informatiques, à la cybersécurité et à l’administration des systèmes. Elle vise à fournir à ses étudiants des compétences techniques solides en configuration et gestion des réseaux, sécurisation des infrastructures informatiques, et protection des données face aux menaces numériques.</p>
+                <p>
+                    Le programme combine des enseignements théoriques et des travaux pratiques sur des équipements réels et des logiciels spécialisés,
+                    permettant aux étudiants d’acquérir une expérience concrète et de se préparer efficacement au marché du travail. Les étudiants 
+                    apprennent également à analyser les vulnérabilités, mettre en place des solutions de sécurité et gérer des projets informatiques 
+                    dans un environnement professionnel.</p>
+                <p><strong>Chef de  filière:</strong> <em>A. Jibouni </em>, est maître de conférences à l’École Supérieure de Technologie de Dakhla et coordonnateur de la filière « Gestion de réseaux et sécurité ». Il a obtenu son doctorat à l’Université Mohammed V de Rabat (LRIT / Rabat IT Center, Faculté des Sciences). Ses travaux portent sur l’analyse des réseaux complexes et la prédiction de liens (link prediction) dans les réseaux sociaux, à l’intersection de la théorie des graphes, du data mining et de l’apprentissage automatique (y compris le deep learning). Il développe des méthodes combinant des mesures de similarité, des informations topologiques globales et des approches supervisées afin d’améliorer la précision des recommandations et l’anticipation des interactions futures dans des graphes dynamiques. Parmi ses contributions figurent une approche paramétrée intégrant les Mean Received Resources à des algorithmes de machine learning, ainsi que des travaux reliant la centralité d’intermédiarité (betweenness) aux Graph Neural Networks pour la prédiction de liens.</p>
+
+
+            </div>
+        </section>
+
+        <!-- Présentation des membres -->
+        <section>
+    <h2>Équipe du Projet</h2>
+    <div class="team">
+        <div class="member">
+            <div class="circle">SM</div>
+            <p><strong>SAHIB MOAD</strong><br>Développeur principal : il a conçu et mis en œuvre le site web et l’application RSA, garantissant leur fonctionnement réel pour l’utilisation.</p>
+        </div>
+        <div class="member">
+            <div class="circle">MLG</div>
+            <p><strong>Meme Leko Juste Glavany</strong><br>Responsable recherche : il a réalisé toutes les recherches nécessaires pour collecter et valider les informations utilisées dans le projet.</p>
+        </div>
+        <div class="member">
+            <div class="circle">LF</div>
+            <p><strong>Loubna FARAH</strong><br>Rédactrice du rapport : elle a rédigé le rapport complet du projet, en assurant clarté, organisation et précision des informations.</p>
+        </div>
+        <div class="member">
+            <div class="circle">OL</div>
+            <p><strong>Oumaima LAHLALY</strong><br>Chargée de la présentation : elle a préparé la présentation finale du projet, en mettant l’accent sur la qualité visuelle et la lisibilité des contenus.</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Explication RSA -->
+        <section>
+    <h2>Chiffrement et Déchiffrement RSA</h2>
+    <div class="section-content">
+        <p><strong>RSA</strong> est un algorithme de cryptographie asymétrique qui utilise deux clés : une clé publique pour chiffrer les données et une clé privée pour les déchiffrer.</p>
+
+        <h3>Fonctions mathématiques de base :</h3>
+        <ul style="padding-left: 20px;">
+            <li>Choisir deux nombres premiers p et q.</li>
+            <li>Calculer n = p * q.</li>
+            <li>Calculer φ(n) = (p-1)(q-1).</li>
+            <li>Choisir e tel que 1 &lt; e &lt; φ(n) et gcd(e, φ(n)) = 1.</li>
+            <li>Calculer d tel que d * e ≡ 1 mod φ(n) (clé privée).</li>
+        </ul>
+
+        <h3>Chiffrement :</h3>
+        <p>Pour un message m :</p>
+        <div class="rsa-code">
+            c = m<sup>e</sup> mod n
+        </div>
+
+        <details>
+            <summary>Exemple de chiffrement</summary>
+            <div class="rsa-code">
+                Message m = 7<br>
+                Clé publique (e, n) = (5, 33)<br>
+                Chiffrement :<br>
+                c = 7<sup>5</sup> mod 33 = 10
+            </div>
+        </details>
+
+        <h3>Déchiffrement :</h3>
+        <p>Avec la clé privée d :</p>
+        <div class="rsa-code">
+            m = c<sup>d</sup> mod n
+        </div>
+
+        <details>
+            <summary>Exemple de déchiffrement</summary>
+            <div class="rsa-code">
+                Message chiffré c = 10<br>
+                Clé privée d = 29<br>
+                Déchiffrement :<br>
+                m = 10<sup>29</sup> mod 33 = 7
+            </div>
+        </details>
+
+        <h3>Cassage de RSA :</h3>
+        <p>Le principal point faible de RSA est la factorisation de n en ses nombres premiers p et q. Une fois connus, φ(n) peut être calculé et la clé privée d peut être dérivée. Les méthodes d'attaque incluent :</p>
+        <ul style="padding-left: 20px;">
+            <li>Factorisation classique (trial division, Pollard rho, etc.)</li>
+            <li>Attaque par cryptanalyse mathématique sur de petits exposants</li>
+            <li>Attaque par force brute (impraticable pour des clés modernes ≥2048 bits)</li>
+        </ul>
+
+        <details>
+            <summary>Exemple de cassage (cas simple)</summary>
+            <div class="rsa-code">
+                n = 33<br>
+                Factorisation : 33 = 3 × 11<br>
+                φ(n) = (3−1)(11−1) = 20<br>
+                e = 5<br>
+                Calcul de d : d × 5 ≡ 1 mod 20 → d = 29<br>
+                ⇒ La clé privée est retrouvée
+            </div>
+        </details>
+        <details class="rsa-box" open>
+            <summary>Codes Python :</summary>
+            <ol type="I" style="padding-left: 100px;">
+                <li>
+                    <h3>Génération de la clé privée & publique</h3>
+                    <img src="imgs/code.png" alt="generation du cles publique et privée" width="800" height="500" style="padding-left: 50px;">
+
+    <div style="padding-left: 10px;">
+
+            <details class="rsa-box">
+            <summary style="padding-bottom: 10px;">Explication ligne par ligne</summary>
+            <section><b><i>Ce code à pour objectif la génération des clés (public et privé) et le stockage sous format binaire chacun dans un fichier PEM, pour la sécurité et la réutilisabilité des clés</i></b></section>
+            <pre id="explication">
+1. from Crypto.PublicKey import RSA
+   from Crypto.Cipher import PKCS1_OAEP
+   → importe la classe RSA du module Crypto.publickey pour la génération des clés. Et Crypto.Cipher importe la PKS_OAEP pour <br>     le chiffrement et dechiffrement.
+
+2. key = RSA.generate(1024)
+   → Génération d'une paire de clés RSA de 1024 bits (clé privée + clé publique).
+
+3. private_key = key.export_key()
+   → Extraction de la clé privée au format PEM pour l'enregistrement.
+
+4. with open("private_key.pem", "wb") as f:
+       f.write(private_key)
+   → Sauvegarde de la clé privée dans le fichier private_key.pem.
+   ⚠️ Cette clé doit rester secrète.
+
+5. public_key = key.publickey().export_key()
+   → Extraction de la clé publique au format PEM.
+
+6. with open("public_key.pem", "wb") as f:
+       f.write(public_key)
+   → Sauvegarde de la clé publique dans le fichier public_key.pem.
+   Cette clé peut être partagée pour chiffrer les messages.
+            </pre>
+
+            </details>
+            </li>
+            <li>
+                    <h3>Chiffrement avec la cle publique(RSA)</h3>
+                    <img src="imgs/code1.png" alt="chiffrement.py" width="800" height="600" style="padding-left: 50px;">
+
+    <div style="padding-left: 10px;">
+
+            <details class="rsa-box">
+            <summary style="padding-bottom: 10px;">Explication ligne par ligne</summary>
+            <section><b><i>Ce code lit le fichier PEM, récupère la clé publique, puis  transforme la clé publique en un objet de chiffrement. Et chiffre le message, puis le stocke dans un fichier au format binaire.</i></b></section>
+            <pre id="explication">
+1. from Crypto.Cipher import PKCS1_OAEP
+   from Crypto.PublicKey import RSA
+   → Import des bibliothèques pour manipuler RSA et le chiffrement OAEP.
+
+2. with open("public_key.pem", "rb") as f:
+       public_key = RSA.import_key(f.read())
+   → Lecture de la clé publique depuis le fichier PEM et conversion en objet clé.
+
+3. cipher = PKCS1_OAEP.new(public_key)
+   → Création de l'objet de chiffrement RSA avec la clé publique.
+
+4. message = input("Saisir votre message:").encode("utf-8")
+   → Demande du message à l'utilisateur et conversion en bytes pour le chiffrement.
+
+5. message_chiffre = cipher.encrypt(message)
+   → Chiffrement du message avec la clé publique. Le résultat est binaire.
+
+6. with open("message_chiffre.bin", "wb") as f:
+       f.write(message_chiffre)
+   → Sauvegarde du message chiffré dans un fichier binaire.
+
+7. print("Le message a été chiffré !")
+   print(message_chiffre)
+   → Affichage de la confirmation et du contenu chiffré.
+            </pre>
+
+            </details>
+            </li>
+            <li>
+                    <h3>Déchiffrement à l'aide de clé privée</h3>
+                    <img src="imgs/code2.png" alt="dechiffrement.py" width="800" height="600" style="padding-left: 50px;">
+
+    <div style="padding-left: 10px;">
+
+            <details class="rsa-box">
+            <summary style="padding-bottom: 10px;">Explication ligne par ligne</summary>
+            <section><b><i>Ce code permet de lire le fichier contenant le message chiffré et lire le fichier PEM contenant la clé privée, charge la clé et fait le décryptage puis affiche le message clair.</i></b></section>
+            <pre id="explication">
+1. from Crypto.Cipher import PKCS1_OAEP
+   from Crypto.PublicKey import RSA
+   → Import des bibliothèques nécessaires :
+     - RSA pour gérer les clés publiques et privées
+     - PKCS1_OAEP pour utiliser le padding sécurisé OAEP avec RSA
+
+2. with open("message_chiffre.bin", "rb") as f:
+       message_chiffre = f.read()
+   → Lecture du message chiffré depuis le fichier binaire message_chiffre.bin
+   → Le message est lu en mode binaire ("rb") car il est chiffré
+
+3. with open("private_key.pem", "rb") as f:
+       private_key = RSA.import_key(f.read())
+   → Chargement de la clé privée RSA depuis le fichier private_key.pem
+   → La clé privée est indispensable pour le déchiffrement
+
+4. decipher = PKCS1_OAEP.new(private_key)
+   → Création de l’objet de déchiffrement RSA en utilisant :
+     - la clé privée
+     - le padding sécurisé OAEP
+
+5. texte_plain = decipher.decrypt(message_chiffre)
+   → Déchiffrement du message chiffré
+   → Le résultat est encore en format binaire (bytes)
+
+6. message_claire = texte_plain.decode()
+   → Conversion du message déchiffré depuis le binaire vers un texte lisible (UTF-8)
+
+7. with open("message_dechiffre.txt", "w") as f:
+       f.write(message_claire)
+   → Sauvegarde du message déchiffré dans un fichier texte message_dechiffre.txt
+
+8. print("message: ", message_claire)
+   → Affichage du message déchiffré à l’écran
+</pre>
+            </details>
+            </li>
+            </ol>
+
+        </details>
+</section>
+
+
+    <footer>
+    <div class="container" >
+        <p><a href="about.html">À propos</a></p>
+        <p>&copy; 2025 — EST-D | Filière GRS | Tous les droits sont reserves</p>
+    </div>
+    </footer>
+</body>
+</html>

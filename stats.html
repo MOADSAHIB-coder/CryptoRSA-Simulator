@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistiques RSA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background: #f3f4f6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #6B5B95;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background: #6B5B95;
+            color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .btn-clear {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #F67280;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-clear:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📊 Statistiques des opérations RSA</h1>
+</header>
+
+<div class="container">
+    <h2>Historique des opérations</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Type d'opération</th>
+                <th>Type d'entrée</th> <!-- Nouveau -->
+                <th>Date & Heure</th>
+            </tr>
+        </thead>
+        <tbody id="statsTable">
+            <!-- Rempli dynamiquement -->
+        </tbody>
+    </table>
+
+    <button class="btn-clear" onclick="clearStats()">Vider l'historique</button>
+</div>
+
+<footer>
+    <div class="container" >
+        <p><a href="about.html">À propos</a></p>
+        <p>&copy; 2025 — EST-D | Filière GRS | Tous les droits sont reserves</p>
+    </div>
+</footer>
+
+<script>
+    function loadStats() {
+        let stats = JSON.parse(localStorage.getItem("rsaStats")) || [];
+        let table = document.getElementById("statsTable");
+        table.innerHTML = "";
+
+        if (stats.length === 0) {
+            table.innerHTML = `
+                <tr>
+                    <td colspan="4">Aucune opération enregistrée</td>
+                </tr>`;
+            return;
+        }
+
+        stats.forEach((stat, index) => {
+            let row = `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${stat.type}</td>
+                    <td>${stat.inputType}</td>
+                    <td>${stat.date}</td>
+                </tr>
+            `;
+            table.innerHTML += row;
+        });
+    }
+
+    function clearStats() {
+        if (confirm("Voulez-vous vraiment supprimer l'historique ?")) {
+            localStorage.removeItem("rsaStats");
+            loadStats();
+        }
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        loadStats();
+    });
+
+
+</script>
+
+</body>
+</html>
