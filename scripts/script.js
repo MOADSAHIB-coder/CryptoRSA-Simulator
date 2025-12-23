@@ -217,6 +217,10 @@ function crackRSA(){
         text+=String.fromCharCode(modPow(c,d,n));
     }
 
-    document.getElementById('result').value=text;
-    saveStat("Cassage RSA");
+    document.getElementById("fileResult").style.display = "none";
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result").value = text;
+
+saveStat("Cassage RSA");
+
 }
